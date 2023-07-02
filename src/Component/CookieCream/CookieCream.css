@@ -4,11 +4,34 @@
     background-color: #25201D;
     border-radius: 50%;
     border: 1px solid aliceblue;
-    padding-top: -50%;
-    margin-bottom: -5%;
+    margin: auto;
     position:relative
 }
 
 .Cookie:last-of-type {
     margin-bottom: 0% !important;
+}
+
+.Cookie.white {
+    width: 400px;
+    height: 200px;
+    background-color: #f0f8ff;
+    margin-bottom: -15% !important;
+    border: 1px solid #25201D;
+}
+
+.white:has(+ .white) {
+    margin-bottom: -14% !important;
+}
+
+.black:has(+ .black) {
+    margin-bottom: -18% !important;
+}
+
+.white:has(+ .black) {
+    margin-bottom: -17% !important;
+}
+
+.black:has(+ .white) {
+    margin-bottom: -13% !important;
 }

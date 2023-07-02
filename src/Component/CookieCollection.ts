@@ -1,12 +1,14 @@
 'use client';
 export default class CookieCollection {
+    cookiesList: Boolean[] = [true, false, true, true, true, false, false, false, true, false, true, false,]
     constructor() {
         
     }
     addCookie() {
-        console.log("add cookie")
+        this.cookiesList.push(true)
+        console.log(this.cookiesList)
     }
     addCream() {
-        console.log("add cream")
+        this.cookiesList.push(false)
     }
 }
