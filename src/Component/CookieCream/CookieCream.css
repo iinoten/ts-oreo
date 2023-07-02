@@ -3,5 +3,12 @@
     height: 250px;
     background-color: #25201D;
     border-radius: 50%;
-    border-color: aliceblue;
+    border: 1px solid aliceblue;
+    padding-top: -50%;
+    margin-bottom: -5%;
+    position:relative
+}
+
+.Cookie:last-of-type {
+    margin-bottom: 0% !important;
 }
