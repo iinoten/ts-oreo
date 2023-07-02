@@ -1,14 +1,14 @@
 'use client';
-export default class CookieCollection {
-    cookiesList: Boolean[] = [true, false, true, true, true, false, false, false, true, false, true, false,]
-    constructor() {
-        
+
+import { ChangeEvent, useState } from "react"
+
+export const CookieCollection = () => {
+    const [cookiesList, setCookiesList] = useState<Array<Boolean>>([])
+    const addCookie = () => {
+        setCookiesList([...cookiesList, true])
+        console.log(cookiesList)
     }
-    addCookie() {
-        this.cookiesList.push(true)
-        console.log(this.cookiesList)
-    }
-    addCream() {
-        this.cookiesList.push(false)
+    const addCream = () => {
+        setCookiesList([...cookiesList, false])
     }
 }

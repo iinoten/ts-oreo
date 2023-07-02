@@ -1,22 +1,30 @@
 'use client'
 import './CookieRenderer.css'
 import { CookieCream } from "../CookieCream/CookieCream";
-import CookieCollection from '../CookieCollection';
+import { useState } from 'react';
 
-export default function CookieRenderer() {
+export const CookieRenderer = () => {
+    const [cookiesList, setCookiesList] = useState<boolean[]>([])
+    const addCookie = () => {
+        setCookiesList([...cookiesList, true])
 
-    const cookiesCollection = new CookieCollection()
-        return (
-            <>
-                <div className="CookieRenderer">
-                    {
-                        cookiesCollection.cookiesList.map((isCookie, index) => (
-                            <CookieCream key={index} isCookie={isCookie} cookieZIndex={cookiesCollection.cookiesList.length - index}/>
-                        ))
-                    }
-                </div>
-                <button onClick={()=>cookiesCollection.addCookie()}>オ</button>
-                <button onClick={()=>cookiesCollection.addCream()}>レ</button>
-            </>
-        )
+    }
+    const addCream = () => {
+        setCookiesList([...cookiesList, false])
+
+    }
+    
+    return (
+        <>
+            <div className="CookieRenderer">
+                {
+                    cookiesList.map((isCookie, index) => (
+                        <CookieCream key={index} isCookie={isCookie} cookieZIndex={cookiesList.length - index}/>
+                    ))
+                }
+            </div>
+            <button onClick={()=>addCookie()}>オ</button>
+            <button onClick={()=>addCream()}>レ</button>
+        </>
+    )
 }

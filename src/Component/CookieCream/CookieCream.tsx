@@ -1,5 +1,6 @@
 import { color } from "@/constant"
 import "./CookieCream.css"
+import { useRef } from "react"
 
 const addStyle = (index: number): { [key: string]: string|number } => {
     return ({
@@ -13,6 +14,5 @@ type Props = {
 }
 
 export const CookieCream: VFC<Props> = ({cookieZIndex=0,isCookie=true}) => {
-    
-    return <div className={`Cookie ${isCookie?'black':'white'}`} style={addStyle(cookieZIndex)} />
+    return <div className={`Cookie ${isCookie?'black':'white'}`}  style={addStyle(cookieZIndex)} />
 }

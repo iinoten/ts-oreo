@@ -1,6 +1,6 @@
 .Cookie {
-    width: 500px;
-    height: 250px;
+    width: 160px;
+    height: 80px;
     background-color: #25201D;
     border-radius: 50%;
     border: 1px solid aliceblue;
@@ -13,25 +13,25 @@
 }
 
 .Cookie.white {
-    width: 400px;
-    height: 200px;
+    width: 140px;
+    height: 70px;
     background-color: #f0f8ff;
     margin-bottom: -15% !important;
     border: 1px solid #25201D;
 }
 
 .white:has(+ .white) {
-    margin-bottom: -14% !important;
+    margin-bottom: -55px !important;
 }
 
 .black:has(+ .black) {
-    margin-bottom: -18% !important;
+    margin-bottom: -50px !important;
 }
 
 .white:has(+ .black) {
-    margin-bottom: -17% !important;
+    margin-bottom: -70px !important;
 }
 
 .black:has(+ .white) {
-    margin-bottom: -13% !important;
+    margin-bottom: -55px !important;
 }
