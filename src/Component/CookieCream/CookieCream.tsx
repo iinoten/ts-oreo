@@ -13,6 +13,6 @@ type Props = {
     isCookie: boolean
 }
 
-export const CookieCream: VFC<Props> = ({cookieZIndex=0,isCookie=true}) => {
+export const CookieCream = ({cookieZIndex=0,isCookie=true}) => {
     return <div className={`Cookie ${isCookie?'black':'white'}`}  style={addStyle(cookieZIndex)} />
 }
